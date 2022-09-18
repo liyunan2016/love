@@ -667,7 +667,19 @@
     }());
     S.init();
 </script>
-<audio autoplay="autoplay" loop="loop">
+<script type="text/javascript">
+    document.addEventListener(‘DOMContentLoaded’, function () {
+    function audioAutoPlay() {
+    var audio = document.getElementById(‘bgmusic’);
+    audio.play();
+    document.addEventListener(“WeixinJSBridgeReady”, function () {
+    audio.play();
+    }, false);
+    }
+    audioAutoPlay();
+});
+</script>
+<audio audio id="bgmusic" autoplay="autoplay" loop="loop">
     <source src="https://dl.stream.qqmusic.qq.com/C400002ymax52s7GPT.m4a?guid=6822757356&vkey=63A4058C283F9CD43C679FF30E8498826B88CA9343A232903BF58CBBC71937364843DB38FD6515BC90FEF12E468BA65D367F5F9C6120A0D8&uin=871533807&fromtag=120032" type="audio/mpeg">
 </audio>
 </body>
